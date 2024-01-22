@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     reponse.innerHTML = "";
   }
 
-  function check(element, element2) {//cette fonction étais, à l'origine, après l'addEventListener(plus bas) elle permet de checker la bonne réponse.
+  function check(element, element2) {
+    //cette fonction étais, à l'origine, après l'addEventListener(plus bas) elle permet de checker la bonne réponse.
     if (element == element2) {
       // console.log("YOUPIIII !!")
       score++;
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   affich();
   function affich() {
-    let currentQuestion = questions[indexQuest].question;// au dépars les 5 variables qui suivent n'étaient pas là et après reflextion j'en ai déduit qu'il falait qu'elle soient générées à l'interieur de la fonction "affich"
+    let currentQuestion = questions[indexQuest].question; // au dépars les 5 variables qui suivent n'étaient pas là et après reflextion j'en ai déduit qu'il falait qu'elle soient générées à l'interieur de la fonction "affich"
     quest.textContent = currentQuestion;
     let bonneReponse = questions[indexQuest].correctAnswerIndex;
     let choixReponses = questions[indexQuest].answers;
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             erase();
             affich();
           } else {
-            quest.textContent = "GAGNEEEE";
+            quest.textContent = "GAGNEEEE !!!";
             erase();
           }
         });
