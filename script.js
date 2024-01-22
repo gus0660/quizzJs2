@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   affich();
   function affich() {
-    let currentQuestion = questions[indexQuest].question;
+    let currentQuestion = questions[indexQuest].question;// au dépars les 5 variables qui suivent n'étaient pas là et après reflextion j'en ai déduit qu'il falait qu'elle soient générées à l'interieur de la fonction "affich"
     quest.textContent = currentQuestion;
     let bonneReponse = questions[indexQuest].correctAnswerIndex;
     let choixReponses = questions[indexQuest].answers;
