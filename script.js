@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     reponse.innerHTML = "";
   }
 
-  function check(element, element2) {
+  function check(element, element2) {//cette fonction étais, à l'origine, après l'addEventListener(plus bas) elle permet de checker la bonne réponse.
     if (element == element2) {
       // console.log("YOUPIIII !!")
       score++;
