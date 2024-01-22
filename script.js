@@ -55,6 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
     reponse.innerHTML = "";
   }
 
+  function check(element, element2) {
+    if (element == element2) {
+      // console.log("YOUPIIII !!")
+      score++;
+      points.innerHTML = score;
+    }
+  }
+
   affich();
   function affich() {
     let currentQuestion = questions[indexQuest].question;
@@ -73,11 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
         nouvLi.textContent = itemsRep;
         nouvLi.addEventListener("click", () => {
           // console.log(indexRep)
-          if (indexRep == bonneReponse) {
-            // console.log("YOUPIIII !!")
-            score++;
-            points.innerHTML = score;
-          }
+          // if (indexRep == bonneReponse) {
+          //   // console.log("YOUPIIII !!")
+          //   score++;
+          //   points.innerHTML = score;
+          // }
+          check(indexRep, bonneReponse);
           indexQuest++;
           if (indexQuest < questions.length) {
             erase();
